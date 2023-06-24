@@ -1,0 +1,119 @@
+* {
+    --size: 125px;
+    --gap: 45px;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .screen {
+    background: black;
+    height: 100vh; /* remove */
+    width: 100vw;
+  }
+  
+  .sliceWrapper {
+    position: relative;
+    border: 1px solid whitesmoke;
+    padding: 0;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  
+  .slice {
+      position: absolute;
+      height: var(--size);
+      width: var(--size);
+      transform-origin: 0% 100%;
+      left: 50%;
+      bottom: 50%;
+      transform: skewY(30deg);
+  }
+  
+  .sliceWrapper p {
+      position: absolute;
+      left: 50%;
+      top: 25%;
+      color: white;
+  }
+  
+  .sliceWrapper .slice:hover {/* no hover, use a click event*/
+      color: black;
+      background: lightgrey;
+  }
+  
+  .sliceWrapper .slice:nth-child(1) {
+      rotate: 30deg;
+      /* background: lightgrey; */
+  }
+  
+  .sliceWrapper p:nth-child(4) {
+      top:0%;
+      left: 33%;
+  }
+  
+  .sliceWrapper .slice:nth-child(2) {
+      rotate: 150deg;
+      /* background: lightgrey; */
+  }
+  
+  .sliceWrapper p:nth-child(5) {
+      /* top: 25%; */
+      left: 75%;
+  }
+  
+  .sliceWrapper .slice:nth-child(3) {
+      rotate: 270deg;
+      /* background: lightgrey; */
+  }
+  
+  .sliceWrapper p:nth-child(6) {
+      top: 50%;
+      left: 33%;
+  }
+  
+  .pd1, .pd2, .pd3,
+  .pd4, .pd5, .pd6,
+  .pdcenter {
+    position: absolute;
+    translate: -50% -50%;
+  }
+  
+  .pdcenter {
+    top: 50vh;
+    left: 50vw;
+  }
+  
+  .pd1 {
+    top: calc(50vh + (var(--size) + var(--gap)) * -1);
+    left: calc(50vw + (var(--size) + var(--gap)) * 0);
+  }
+  
+  .pd2{
+    top: calc(50vh + (var(--size) + var(--gap)) * -.5);
+    left: calc(50vw + (var(--size) + var(--gap)) * .86);
+  }
+  
+  .pd3 {
+    top: calc(50vh + (var(--size) + var(--gap)) * .5);
+    left: calc(50vw + (var(--size) + var(--gap)) * .86);
+  }
+  
+  .pd4 {
+    top: calc(50vh + (var(--size) + var(--gap)) * 1);
+    left: calc(50vw + (var(--size) + var(--gap)) * 0);
+  }
+  
+  .pd5{
+    top: calc(50vh + (var(--size) + var(--gap)) * .5);
+    left: calc(50vw + (var(--size) + var(--gap)) * -.86);
+  }
+  
+  .pd6 {
+    top: calc(50vh + (var(--size) + var(--gap)) * -.5);
+    left: calc(50vw + (var(--size) + var(--gap)) * -.86);
+  }
